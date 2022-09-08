@@ -10,7 +10,8 @@ const Sidebar = ({selectedCategory, setSelectedCategory}) => {
         sx={{
             overflowY: 'auto',
             height: {sx:'auto', md:'95%'},
-            flexDirection: {md: 'column'}
+            flexDirection: {md: 'column'},
+            width: '180px'
             }}
     >
         {categories.map(category => (
@@ -19,7 +20,8 @@ const Sidebar = ({selectedCategory, setSelectedCategory}) => {
                 onClick={()=> setSelectedCategory(category.name)}
                 style={{
                     background: category.name === selectedCategory && '#FC1503',
-                    color:'white'
+                    color:'white',
+                    width: '150px'
                     }}
                 key={category.name}
             >
